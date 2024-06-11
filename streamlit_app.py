@@ -31,7 +31,10 @@ for message in st.session_state.messages:
         st.write(message["content"])
 
 # Function for generating LLM response
-def generate_response(prompt_input, email, passwd):
+def generate_response(prompt_input):
+
+    email = "esfahan.elman@petronas.com"
+    passwrd = "Esfahan_181103"
     # Hugging Face Login
     sign = Login(email, passwd)
     cookies = sign.login()
